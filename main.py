@@ -369,8 +369,10 @@ while True:
     WINDOW.blit(xval,(10,10))
     #Projects everything onto the WINDOW
     if PLAYER_RECT.y > WINDOW.get_height(): 
-      game_map = load_map(levels[0])
-      levels = levels[1:]
+      try:
+        game_map = load_map(levels[0])
+        levels = levels[1:]
+        except
     if walkframe >= 5:
       walkframe = 0
     else: walkframe +=0.1
